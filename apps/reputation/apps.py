@@ -1,0 +1,8 @@
+# apps/reputation/apps.py
+from django.apps import AppConfig
+
+class ReputationConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'apps.reputation'
+    def ready(self):
+        from . import signals  # noqa
